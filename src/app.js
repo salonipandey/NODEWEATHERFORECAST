@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 9007
 const forecast = require('./utility/forecast')
 
 
@@ -40,6 +41,6 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.listen(9007, () => {
-    console.log("Server is started 9007")
+app.listen(port, () => {
+    console.log("Server is started" + port)
 })
